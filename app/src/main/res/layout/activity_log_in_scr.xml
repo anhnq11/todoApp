@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    >
+
+    <ImageView
+        android:layout_width="143dp"
+        android:layout_height="114dp"
+        android:src="@drawable/img0"
+        />
+
+    <TextView
+        style="@style/tittle"
+        android:layout_marginTop="-10dp"
+        android:text="WELCOME BACK!"
+        />
+
+    <ImageView
+        android:layout_width="234dp"
+        android:layout_height="152dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/img3" />
+
+    <EditText
+        android:id="@+id/txtLogInName"
+        style="@style/inPut2"
+        android:layout_marginTop="30dp"
+        android:hint="UserName"
+        />
+
+    <EditText
+        android:id="@+id/txtLogInPass"
+        style="@style/inPut2"
+        android:layout_marginBottom="0dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <CheckBox
+            android:id="@+id/chkRememberMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember my Account"
+            android:gravity="center"
+            android:textSize="17dp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/tittle"
+        android:layout_marginTop="10dp"
+        android:textColor="#00C1FF"
+        android:textSize="17dp"
+        android:text="Forget Password"
+        />
+
+    <Button
+        android:id="@+id/btnLogin"
+        style="@style/custom_btn"
+        android:layout_marginTop="20dp"
+        android:text="Login"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account?"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            />
+
+        <TextView
+            android:id="@+id/txtToSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Sign Up"
+            android:cursorVisible="true"
+            android:textColor="#00C1FF"
+            android:textSize="15dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Or sign up with"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/btnLoginWFb"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/fb_logo" />
+
+            <ImageView
+                android:id="@+id/btnLoginWGg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/gg_logo"
+                android:layout_marginLeft="20dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

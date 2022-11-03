@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="0dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="143dp"
+        android:layout_height="114dp"
+        android:src="@drawable/img0" />
+
+    <ImageView
+        android:layout_width="205dp"
+        android:layout_height="152dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/img1" />
+
+    <TextView
+        style="@style/tittle"
+        android:text="Get things done with TODO"
+        />
+
+    <TextView
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="In your daily, day to day life we often lose track of time and forget to do the things that needs to be done. "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        />
+
+    <Button
+        android:id="@+id/mainScrBtn"
+        style="@style/custom_btn"
+        android:layout_marginTop="100dp"
+        android:text="Get Started"
+        />
+
+    <TextView
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Hi, I'm created by AnhNq :D"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        />
+
+</LinearLayout>
