@@ -3,6 +3,7 @@ package com.example.to_dolist;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -105,7 +106,13 @@ public class signInScr extends AppCompatActivity {
         if(checkSignIn){
             Account account = new Account(SiName, SiEmail, SiPass);
             if(qlAccount.themAccount(account) >= 0){
-                Intent intent = new Intent(signInScr.this, logInScr.class);
+                Intent intent = new Intent(signInScr.this, MainActivity2.class);
+                SharedPreferences save = getSharedPreferences("FILE", MODE_PRIVATE);
+                SharedPreferences.Editor editor = save.edit();
+                editor.putString("userName", SiName);
+                editor.putString("passWord", SiPass);
+                editor.putBoolean("status", true);
+                editor.commit();
                 startActivity(intent);
             }   else {
                 Toast.makeText(this, "Account is Exist", Toast.LENGTH_SHORT).show();

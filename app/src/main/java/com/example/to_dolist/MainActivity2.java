@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -42,8 +43,8 @@ public class MainActivity2 extends AppCompatActivity {
         btnAddTask = findViewById(R.id.btnAddTask);
         qlUser = new QLUser(MainActivity2.this);
 
-        Intent intent = getIntent();
-        String userName = intent.getStringExtra("name");
+        SharedPreferences sharedPreferences = getSharedPreferences("FILE", MODE_PRIVATE);
+        String userName = sharedPreferences.getString("userName", "");
         txtTittle.setText("Welcome " + userName);
 
         capNhatListTask(userName);
@@ -52,6 +53,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity2.this, logInScr.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }
         });

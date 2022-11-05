@@ -111,7 +111,7 @@ public class logInScr extends AppCompatActivity {
             if(qlAccount.checkAccount(account) == 1){ // Tìm kiếm Account trong CSDL
                 savePass(LoName, LoPass, status); // SavePass để kiểm tra status của checkBox
                 Intent intent = new Intent(logInScr.this, MainActivity2.class);
-                intent.putExtra("name", LoName);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }   else {
 //                Dialog
